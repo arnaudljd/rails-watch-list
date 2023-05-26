@@ -54,6 +54,9 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 
+# cloudinary
+gem "dotenv-rails"
+
 # faker
 gem 'faker'
 
