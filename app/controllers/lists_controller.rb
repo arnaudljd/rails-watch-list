@@ -8,7 +8,6 @@ class ListsController < ApplicationController
   def show
     @bookmark = Bookmark.new
     @allmovies = Movie.all.to_a
-    # @list = 
   end
 
   def new
