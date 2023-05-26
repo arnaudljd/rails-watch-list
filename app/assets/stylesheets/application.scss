@@ -10,3 +10,20 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card {
+  height: 180px;
+  width: 100%;
+  size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+}
