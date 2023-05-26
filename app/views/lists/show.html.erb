@@ -1,15 +1,26 @@
-<h1><%= @list.name %> movies</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_url "space.jpg" %>');">
+  <div class="container">
+    <h1 class="text-white"><strong><%= @list.name %> movies</strong></h1>
+  </div>
+</div>
 
-<ul>
-  <% @list.bookmarks.each do |bookmark| %>
-    <li>
-      <%= bookmark.movie.title %>
-      <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete }, class: 'text-danger' %>
-    </li>
-  <% end %>
-</ul>
 
-<div>
-  <%= link_to "Add a movie", new_list_bookmark_path(@list) %> |
-  <%= link_to "Back to lists", lists_path %>
+<div class="container">
+  <div class="my-4 mx-10">
+    <div class="d-flex inline-block justify-content-end mb-3", style="margin-bottom: inherit;">
+      <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-success text-white" %>
+    </div>
+    <div class="cards">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="card-movie" style="width: 18rem;">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" class="card-img-top" alt="...">
+          <div class="card-body m-3">
+            <h5 class="card-title"><%= bookmark.movie.title %></h5>
+            <p class="card-text py-2"><%= bookmark.comment %></p>
+            <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete }, class: 'btn btn-danger text-white text-end' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
