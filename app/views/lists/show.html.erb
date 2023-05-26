@@ -4,7 +4,6 @@
   <% @list.bookmarks.each do |bookmark| %>
     <li>
       <%= bookmark.movie.title %>
-      <%#= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete } %>
       <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete }, class: 'text-danger' %>
     </li>
   <% end %>

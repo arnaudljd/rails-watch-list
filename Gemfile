@@ -55,6 +55,9 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 
 # cloudinary
+gem "cloudinary"
+
+# environment
 gem "dotenv-rails"
 
 # faker
